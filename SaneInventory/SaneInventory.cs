@@ -191,8 +191,9 @@ namespace SaneInventory
                 return shipKarveCargoWeightLimitConfig.Value;
             if (name.ToLower().Contains("vikingship"))
                 return shipLongboatCargoWeightLimitConfig.Value;
-
-            return 0;
+                
+            // unlimited weight for custom ship mods
+            return Int64.MaxValue;
         }
 
         private void bindConfig()
